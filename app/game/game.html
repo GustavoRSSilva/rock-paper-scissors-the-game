@@ -1,0 +1,29 @@
+<div id="full-card-container">
+
+    <div id="card-header-container" class="text-center">
+        <p>
+            <h2>Rock, Paper, Scissors - The game</h1>
+        </p>
+        <p>
+            <h3>Player: {{GameCtrl.gameScore.you}}  -  CPU: {{GameCtrl.gameScore.cpu}}</h2>
+        </p>
+    </div>
+
+    <div id="card-main-container">
+        <div id="card-main-left">
+            <select ng-model="GameCtrl.yourChoise" ng-options="o as o for o in GameCtrl.choises" ng-change="GameCtrl.updateUserChoise()">
+              <input type="hidden" name="GameCtrl.selectedOption" />
+            </select>
+        </div>
+
+        <div id="card-main-right">
+
+        </div>
+
+    </div>
+
+
+
+
+
+</div>

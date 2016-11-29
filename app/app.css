@@ -1,25 +1,19 @@
 /* app css stylesheet */
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+#full-card-container {
+  float: left;
+  width: 60%;
+  left: 20%;
+  margin: -3px;
+  border: 3px solid black;
+  position: absolute;
+  top: 10%;
 }
 
-.menu:before {
-  content: "[";
+#card-header-container{
+  border-bottom:  3px solid black;
+  margin-bottom: 20px;
 }
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.text-center{
+  text-align: center;
 }
