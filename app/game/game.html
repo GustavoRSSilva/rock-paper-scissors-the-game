@@ -10,20 +10,29 @@
     </div>
 
     <div id="card-main-container">
-        <div id="card-main-left">
+        <div id="card-main-left" class=" text-center">
+            <div id="your-main-img" class="{{GameCtrl.yourChoise | lowercase}}"></div>
             <select ng-model="GameCtrl.yourChoise" ng-options="o as o for o in GameCtrl.choises" ng-change="GameCtrl.updateUserChoise()">
               <input type="hidden" name="GameCtrl.selectedOption" />
             </select>
         </div>
 
-        <div id="card-main-right">
-
+        <div id="card-main-right" class=" text-center">
+            <div id="cpu-main-img">
+                <div ng-show="GameCtrl.cpuChoise === null" id="cpu-sprite-img"></div>
+                <div ng-hide="GameCtrl.cpuChoise === null" class="{{GameCtrl.cpuChoise | lowercase}}"></div>
+            </div>
+            <b>Cpu</b>
         </div>
-
     </div>
 
+    <div id="card-footer" class="text-center">
+        <!-- if the game is not over -->
+        <button ng-show="GameCtrl.cpuChoise === null" ng-click="GameCtrl.getResult()">Play</button>
 
-
-
+        <!-- Display the result and start a new game -->
+        <h1 ng-hide="GameCtrl.cpuChoise === null">{{GameCtrl.result}}</h1>
+        <button ng-hide="GameCtrl.cpuChoise === null" ng-click="GameCtrl.generateCpuChoise()">New Game</button>
+    </div>
 
 </div>

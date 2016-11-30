@@ -4,11 +4,11 @@ describe('myApp.game module', function() {
 
   beforeEach(module('myApp.game'));
 
-  describe('view1 controller', function(){
+  describe('game controller', function(){
 
     it('should ....', inject(function($controller) {
       //spec body
-      var gameCtrl = $controller('gameCtrl');
+      var gameCtrl = $controller('GameCtrl');
       expect(view1Ctrl).toBeDefined();
     }));
 

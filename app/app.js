@@ -4,6 +4,7 @@
 angular.module('myApp', [
   'ngRoute',
   'myApp.game',
+  'myApp.header'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');

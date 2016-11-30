@@ -1,19 +1,93 @@
 /* app css stylesheet */
 
 #full-card-container {
-  float: left;
-  width: 60%;
-  left: 20%;
-  margin: -3px;
-  border: 3px solid black;
-  position: absolute;
-  top: 10%;
+    float: left;
+    width: 60%;
+    left: 20%;
+    margin: -3px;
+    border: 3px solid black;
+    position: absolute;
+    top: 10%;
 }
 
-#card-header-container{
-  border-bottom:  3px solid black;
-  margin-bottom: 20px;
+#card-header-container {
+  padding-bottom: 10px;
 }
-.text-center{
-  text-align: center;
+
+.text-center {
+    text-align: center;
+}
+
+#card-main-container {
+    float: left;
+    width: 100%;
+    display: flex;
+}
+
+#card-main-left, #card-main-right {
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    padding: 10px 0px;
+}
+
+#your-main-img, #cpu-main-img, #cpu-sprite-img {
+    clear: left;
+    width: 173px;
+    height: 173px;
+    border: 1px solid black;
+    float: left;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#cpu-sprite-img {
+  display: block;
+  background: url('assets/rock-paper-scissors.png');
+   animation: sprite 2s infinite;
+  background-position: -32px -24px;
+}
+
+@keyframes sprite{
+  0% {
+   background-position: -32px -24px;
+  }
+
+  30% {
+   background-position: -240px -24px;
+  }
+
+  60% {
+   background-position: -448px -24px;
+  }
+
+  90% {
+   background-position: -32px -24px;
+  }
+}
+
+#card-footer{
+  padding: 20px;
+}
+.rock {
+    background: url('assets/rock-paper-scissors.png') no-repeat -32px -24px;
+    width: 173px;
+    height: 173px;
+}
+
+.paper {
+    background: url('assets/rock-paper-scissors.png') no-repeat -240px -24px;
+    width: 173px;
+    height: 173px;
+}
+
+.scissors {
+    background: url('assets/rock-paper-scissors.png') no-repeat -448px -24px;
+    width: 173px;
+    height: 173px;
 }
